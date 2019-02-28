@@ -4,6 +4,8 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.io.IOException;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class TriTableauTest {
@@ -18,6 +20,19 @@ class TriTableauTest {
 
     @Test
     void trier() {
+        int monTableau[] = {5,4,3,2,1};
+        int monTableauAttendu[] = {1,2,3,4,5};
+
+        try {
+            TriTableau.trier(monTableau);
+
+            for (int i = 0; i < monTableau.length - 1; i++) {
+                assertTrue(monTableau[i] <= monTableau[i + 1]);
+            }
+        }catch (IOException e){
+            System.out.println((e));
+        }
+
 
     }
 
@@ -30,7 +45,7 @@ class TriTableauTest {
 
         //testBis
         for (int i = 0; i < monTableau.length - 1; i++) {
-            assertTrue(monTableau[i] <= monTableauAttendu [i+1]);
+            assertTrue(monTableau[i] <= monTableau [i+1]);
         }
 
     }
@@ -45,7 +60,7 @@ class TriTableauTest {
         //testBis
         for (int i = 0; i < monTableau.length - 1; i++) {
             if( i != monTableau.length) {
-                assertTrue(monTableau[i] >= monTableauAttendu[i + 1]);
+                assertTrue(monTableau[i] >= monTableau[i + 1]);
             }
         }
 
