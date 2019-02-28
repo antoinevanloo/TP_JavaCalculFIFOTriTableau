@@ -54,7 +54,7 @@ public class FIFO {
         if (queue.isEmpty()) {
             throw new NoSuchElementException();
         } else {
-            queue.remove(1);
+            queue.remove(0);
         }
     }
 

@@ -12,7 +12,6 @@ class FIFOTest {
 
     @BeforeEach
     void setUp() {
-        FIFO unFifoOffi = new FIFO();
     }
 
     @AfterEach
@@ -55,7 +54,7 @@ class FIFOTest {
         unFifoBis.add(5);
         unFifoBis.add(7);
         unFifoBis.removeFirst();
-        assertEquals(unFifoBis.first(),Integer.valueOf(5));
+        assertEquals(unFifoBis.first(),Integer.valueOf(7));
     }
 
     @Test
@@ -68,5 +67,6 @@ class FIFOTest {
         FIFO unFifoBis = new FIFO();
         int tailleBis = 0;
         assertEquals(unFifoBis.size(), tailleBis);
+
     }
 }
