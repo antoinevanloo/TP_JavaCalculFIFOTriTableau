@@ -1,0 +1,6 @@
+
+squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Éìïáüÿÿÿÿ
+Jsquid:S1612D",Replace this lambda with a method reference.(ù¯İÛ8ñóĞÑ’-
+Jsquid:S1602D",Remove useless curly braces around statement(ù¯İÛ8ñóĞÑ’-
+rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(éÂ©·
+squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¦Õß ûÿÿÿÿ

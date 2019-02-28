@@ -1,0 +1,6 @@
+
+rsquid:UselessImportCheck"GRemove this unused import 'org.junit.jupiter.params.ParameterizedTest'.(…²üî8­æªÒ’-
+ysquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(éÂ©·8ßğÑ’-
+{squid:UselessImportCheck"KRemove this unused import 'org.junit.jupiter.params.provider.MethodSource'.(èÖêşÿÿÿÿ8­æªÒ’-
+`squid:UselessImportCheck"5Remove this unused import 'org.junit.runner.RunWith'.(¸ıºô8‹£¬Ò’-
+lsquid:UselessImportCheck"<Remove this unused import 'org.junit.runners.Parameterized'.(·Òó³ıÿÿÿÿ8‹£¬Ò’-
