@@ -18,21 +18,36 @@ class TriTableauTest {
 
     @Test
     void trier() {
+
     }
 
     @Test
     void triCroissant() {
-        int monTab[] = {3,2,1};
-        int expected[] = {1,2,3};
-        TriTableau.triCroissant(monTab);
-        assertEquals(expected[0],monTab[0]);
+        int monTableau[] = {5,4,3,2,1};
+        int monTableauAttendu[] = {1,2,3,4,5};
+        TriTableau.triCroissant(monTableau);
+        assertEquals(monTableau[0],monTableauAttendu[0]);
+
+        //testBis
+        for (int i = 0; i < monTableau.length - 1; i++) {
+            assertTrue(monTableau[i] <= monTableauAttendu [i+1]);
+        }
+
     }
 
     @Test
     void triDecroissant() {
-        int monTab[] = {1,2,3};
-        int expected[] = {3,2,1};
-        TriTableau.triDecroissant(monTab);
-        assertEquals(expected[0],monTab[0]);
+        int monTableau[] = {1,2,3,4,5};
+        int monTableauAttendu[] = {5,4,3,2,1};
+        TriTableau.triDecroissant(monTableau);
+        assertEquals(monTableau[0],monTableauAttendu[0]);
+
+        //testBis
+        for (int i = 0; i < monTableau.length - 1; i++) {
+            if( i != monTableau.length) {
+                assertTrue(monTableau[i] >= monTableauAttendu[i + 1]);
+            }
+        }
+
     }
 }
