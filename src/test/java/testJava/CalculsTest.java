@@ -14,23 +14,23 @@ import java.util.stream.Stream;
 import static org.junit.jupiter.api.Assertions.*;
 
 @RunWith(Parameterized.class)
-public class CalculsTest {
+class CalculsTest {
 
-//    @ParameterizedTest(name="Multiplication numéro {index} : nombre1={0} nombre2={1} resultat attendu={2}")
+    @ParameterizedTest(name="Multiplication numéro {index} : nombre1={0} nombre2={1} resultat attendu={2}")
 
 
     @MethodSource("chargerJeuTest")
 
     @BeforeEach
-    public void setUp() {
+    void setUp() {
     }
 
     @AfterEach
-    public void tearDown() {
+    void tearDown() {
     }
 
     @Test
-    public void multiplier() {
+    void multiplier() {
         Calculs calculs = new Calculs(2,3);
         assertEquals(6,calculs.multiplier());
 
@@ -39,7 +39,7 @@ public class CalculsTest {
     }
 
     @Test
-   public void additionner() {
+    void additionner() {
         Calculs calculs = new Calculs(2,3);
         assertEquals(5,calculs.additionner());
 
@@ -48,7 +48,7 @@ public class CalculsTest {
     }
 
     @Test
-    public void diviser() {
+    void diviser() {
         Calculs calculs = new Calculs(4,2);
         assertEquals(2,calculs.diviser());
 
@@ -57,7 +57,7 @@ public class CalculsTest {
     }
 
     @Test
-   public void soustraire() {
+    void soustraire() {
         Calculs calculs = new Calculs(2,3);
         assertEquals(-1,calculs.soustraire());
 
@@ -66,16 +66,15 @@ public class CalculsTest {
     }
 
     @Test
-    public void testExceptionDiviser() {
+    void testExceptionDiviser() {
         Calculs calculs = new Calculs(8,0);
         assertThrows(ArithmeticException.class,()->{calculs.diviser();});
     }
 
-//    @ParameterizedTest
-//   public static Stream<Arguments> chargerJeuTest() throws Throwable{
-//        return Stream.of(
-//                Arguments.of(2,2,4),
-//                Arguments.of(3,3,9),
-//                Arguments.of(3,4,10));
-//    }
+    static Stream<Arguments> chargerJeuTest() throws Throwable{
+        return Stream.of(
+                Arguments.of(2,2,4),
+                Arguments.of(3,3,9),
+                Arguments.of(3,4,10));
+    }
 }
