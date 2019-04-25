@@ -65,5 +65,6 @@
     <orderEntry type="library" scope="TEST" name="Maven: org.codehaus.plexus:plexus-java:1.0.1" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.ow2.asm:asm:7.0-beta" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: com.thoughtworks.qdox:qdox:2.0-M9" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.junit.vintage:junit-vintage-engine:5.5.0-M1" level="project" />
   </component>
 </module>
