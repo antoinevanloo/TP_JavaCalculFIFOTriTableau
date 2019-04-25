@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class FIFOTest {
 
     @BeforeEach
-    void setUp() {
+    public void setUp() {
     }
 
     @AfterEach
@@ -19,7 +19,7 @@ public class FIFOTest {
     }
 
     @Test
-    void add() {
+    public void add() {
         FIFO unFifo = new FIFO();
         int tailleQue = unFifo.size();
         unFifo.add(1);
@@ -31,7 +31,7 @@ public class FIFOTest {
     }
 
     @Test
-    void first() {
+    public void first() {
         FIFO unFifo = new FIFO();
         assertThrows(NoSuchElementException.class, ()-> unFifo.first() );
 
@@ -40,13 +40,13 @@ public class FIFOTest {
     }
 
     @Test
-    void isEmpty() {
+    public void isEmpty() {
         FIFO unFifo = new FIFO();
         assertEquals(unFifo.isEmpty(), true);
     }
 
     @Test
-    void removeFirst() {
+    public void removeFirst() {
         FIFO unFifo = new FIFO();
         assertThrows(NoSuchElementException.class, ()-> unFifo.removeFirst());
 
@@ -58,7 +58,7 @@ public class FIFOTest {
     }
 
     @Test
-    void size() {
+    public void size() {
         FIFO unFifo = new FIFO();
         int taille = 1;
         unFifo.add(55);

@@ -11,15 +11,15 @@ import static org.junit.jupiter.api.Assertions.*;
 public class TriTableauTest {
 
     @BeforeEach
-    void setUp() {
+    public void setUp() {
     }
 
     @AfterEach
-    void tearDown() {
+    public void tearDown() {
     }
 
     @Test
-    void trier() {
+    public void trier() {
         int monTableau[] = {5,4,3,2,1};
 
         try {
@@ -36,7 +36,7 @@ public class TriTableauTest {
     }
 
     @Test
-    void triCroissant() {
+    public void triCroissant() {
         int monTableau[] = {5,4,3,2,1};
         int monTableauAttendu[] = {1,2,3,4,5};
         TriTableau.triCroissant(monTableau);
@@ -50,7 +50,7 @@ public class TriTableauTest {
     }
 
     @Test
-    void triDecroissant() {
+    public void triDecroissant() {
         int monTableau[] = {1,2,3,4,5};
         int monTableauAttendu[] = {5,4,3,2,1};
         TriTableau.triDecroissant(monTableau);

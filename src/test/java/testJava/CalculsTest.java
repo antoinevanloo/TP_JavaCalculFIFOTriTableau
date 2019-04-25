@@ -22,15 +22,15 @@ public class CalculsTest {
     @MethodSource("chargerJeuTest")
 
     @BeforeEach
-    void setUp() {
+    public void setUp() {
     }
 
     @AfterEach
-    void tearDown() {
+    public void tearDown() {
     }
 
     @Test
-    void multiplier() {
+    public void multiplier() {
         Calculs calculs = new Calculs(2,3);
         assertEquals(6,calculs.multiplier());
 
@@ -39,7 +39,7 @@ public class CalculsTest {
     }
 
     @Test
-    void additionner() {
+   public void additionner() {
         Calculs calculs = new Calculs(2,3);
         assertEquals(5,calculs.additionner());
 
@@ -48,7 +48,7 @@ public class CalculsTest {
     }
 
     @Test
-    void diviser() {
+    public void diviser() {
         Calculs calculs = new Calculs(4,2);
         assertEquals(2,calculs.diviser());
 
@@ -57,7 +57,7 @@ public class CalculsTest {
     }
 
     @Test
-    void soustraire() {
+   public void soustraire() {
         Calculs calculs = new Calculs(2,3);
         assertEquals(-1,calculs.soustraire());
 
@@ -66,7 +66,7 @@ public class CalculsTest {
     }
 
     @Test
-    void testExceptionDiviser() {
+    public void testExceptionDiviser() {
         Calculs calculs = new Calculs(8,0);
         assertThrows(ArithmeticException.class,()->{calculs.diviser();});
     }
