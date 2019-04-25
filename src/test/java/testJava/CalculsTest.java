@@ -71,7 +71,7 @@ public class CalculsTest {
         assertThrows(ArithmeticException.class,()->{calculs.diviser();});
     }
 
-    static Stream<Arguments> chargerJeuTest() throws Throwable{
+   public static Stream<Arguments> chargerJeuTest() throws Throwable{
         return Stream.of(
                 Arguments.of(2,2,4),
                 Arguments.of(3,3,9),
