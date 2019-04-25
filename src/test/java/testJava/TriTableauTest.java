@@ -21,13 +21,12 @@ class TriTableauTest {
     @Test
     void trier() {
         int monTableau[] = {5,4,3,2,1};
-        int monTableauAttendu[] = {1,2,3,4,5};
 
         try {
             TriTableau.trier(monTableau);
 
             for (int i = 0; i < monTableau.length - 1; i++) {
-                assertTrue(monTableau[i] <= monTableau[i + 1]);
+                assertTrue(monTableau[i] >= monTableau[i + 1]);
             }
         }catch (IOException e){
             System.out.println((e));
