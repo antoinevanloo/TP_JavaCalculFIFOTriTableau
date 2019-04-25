@@ -8,7 +8,7 @@ import java.io.IOException;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class TriTableauTest {
+public class TriTableauTest {
 
     @BeforeEach
     void setUp() {
