@@ -35,7 +35,7 @@ import static org.junit.jupiter.api.Assertions.*;
         assertEquals(6,calculs.multiplier());
 
         calculs = new Calculs(8,3);
-        assertEquals(24,calculs.multiplier());
+        assertEquals(24,calculs.multiplier());  
     }
 
     @Test
