@@ -5,6 +5,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.CsvFileSource;
 import org.junit.jupiter.params.provider.MethodSource;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -16,17 +17,21 @@ import static org.junit.jupiter.api.Assertions.*;
 @RunWith(Parameterized.class)
  class CalculsTest {
 
-    @ParameterizedTest(name="Multiplication numéro {index} : nombre1={0} nombre2={1} resultat attendu={2}")
-
-
+    @ParameterizedTest(name="Multiplication de {0} par {1}, resultat attendu {2}")
     @MethodSource("chargerJeuTest")
-
-    @BeforeEach
-    void setUp() {
+    public void multiplier(int first, int last, int result) {
+        Calculs calculs = new Calculs(first,last);
+        assertEquals(result,calculs.multiplier());
     }
 
-    @AfterEach
-    void tearDown() {
+    @ParameterizedTest(name="Addition de {0} par {1}, resultat attendu {2}")
+    @CsvFileSource(resources = "/data.csv")
+    public void additionner(int first, int last, int result) {
+        Calculs calculs = new Calculs(2,3);
+        assertEquals(5,calculs.additionner());
+
+        calculs = new Calculs(8,3);
+        assertEquals(11,calculs.additionner());
     }
 
     @Test
@@ -52,8 +57,7 @@ import static org.junit.jupiter.api.Assertions.*;
         Calculs calculs = new Calculs(4,2);
         assertEquals(2,calculs.diviser());
 
-//        calculs = new Calculs(10,0);
-//        assertEquals(-1,calculs.diviser());
+//        7
     }
 
     @Test
@@ -75,6 +79,6 @@ import static org.junit.jupiter.api.Assertions.*;
         return Stream.of(
                 Arguments.of(2,2,4),
                 Arguments.of(3,3,9),
-                Arguments.of(3,4,10));
+                Arguments.of(3,4,12));
     }
 }
